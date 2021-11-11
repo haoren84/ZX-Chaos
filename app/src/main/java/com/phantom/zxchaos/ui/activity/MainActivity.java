@@ -6,6 +6,9 @@ import android.os.Bundle;
 
 import com.phantom.zxchaos.R;
 
+/**
+ * @author Soul
+ */
 public class MainActivity extends BaseActivity {
 
     @Override
