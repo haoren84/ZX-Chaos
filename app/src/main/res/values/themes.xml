@@ -13,4 +13,15 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="Theme.Launch" parent="Theme.AppCompat.NoActionBar">
+        <!--    窗口是否设置标题    -->
+        <item name="android:windowNoTitle">true</item>
+        <!--    窗口是否全屏显示    -->
+        <item name="android:windowFullscreen">true</item>
+        <!--    窗口背景    -->
+        <item name="android:windowBackground">@color/gray</item>
+        <!--    状态栏颜色    -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
 </resources>

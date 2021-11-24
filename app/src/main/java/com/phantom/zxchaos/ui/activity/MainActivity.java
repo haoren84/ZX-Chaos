@@ -4,19 +4,19 @@ import android.os.Bundle;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.phantom.zxchaos.R;
+import com.phantom.zxchaos.base.BaseActivity;
 import com.phantom.zxchaos.databinding.ActivityMainBinding;
 
 /**
  * @author Soul
  */
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     private ActivityMainBinding binding;
 
