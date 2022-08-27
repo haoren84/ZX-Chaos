@@ -1,8 +1,24 @@
 <resources>
     <string name="app_name">ZX Chaos</string>
+
+    <!--  MainActivity  -->
     <string name="text_content">Hello World!</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+
+    <!--  主菜单项  -->
+    <string name="menu_item_1">menu_item_1</string>
+    <string name="menu_item_2">menu_item_2</string>
+    <string name="menu_item_3">menu_item_3</string>
+
+    <string name="navigation_drawer_open">打开侧边栏</string>
+    <string name="navigation_drawer_close">关闭侧边栏</string>
+
+    <!--  菜单项  -->
+    <string name="text_header">This is NavigationView</string>
+
+    <string name="menu_item_setting">设置</string>
+    <string name="menu_item_about">关于</string>
 </resources>

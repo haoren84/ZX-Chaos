@@ -16,10 +16,10 @@ public class LaunchActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launch);
 
-        initData(savedInstanceState);
+        initData();
     }
 
-    protected void initData(Bundle savedInstanceState) {
+    protected void initData() {
         new Thread(new Runnable() {
             @Override
             public void run() {
