@@ -1,4 +1,4 @@
-package com.phantom.zxchaos.ui.notifications;
+package com.phantom.zxchaos.ui.fragment.dashboard;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
@@ -7,13 +7,13 @@ import androidx.lifecycle.ViewModel;
 /**
  * @author Soul
  */
-public class NotificationsViewModel extends ViewModel {
+public class DashboardViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public NotificationsViewModel() {
+    public DashboardViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is notifications fragment");
+        mText.setValue("This is dashboard fragment");
     }
 
     public LiveData<String> getText() {

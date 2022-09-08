@@ -2,6 +2,7 @@ package com.phantom.zxchaos.ui.activity;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -41,7 +42,8 @@ public class MainActivity extends BaseActivity {
             actionBar.setHomeAsUpIndicator(R.drawable.ic_baseline_list_24);
         }
 
-        NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment_activity_main);
+        NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.nav_host_fragment_activity_main);
         assert navHostFragment != null;
         NavController navController = navHostFragment.getNavController();
 //        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
@@ -52,7 +54,8 @@ public class MainActivity extends BaseActivity {
     }
 
     private void initDrawer() {
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, binding.drawerLayout, binding.toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, binding.drawerLayout,
+                binding.toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
 
         binding.drawerLayout.addDrawerListener(toggle);
 
@@ -81,15 +84,14 @@ public class MainActivity extends BaseActivity {
         int id = item.getItemId();
 
         switch (id) {
-            case R.id.home:
             case R.id.action_1:
-                Toast.makeText(this, "你点击了menu_item_1", Toast.LENGTH_SHORT).show();
+                Log.d("ToolBar", "menu_item_1");
                 break;
             case R.id.action_2:
-                Toast.makeText(this, "你点击了menu_item_2", Toast.LENGTH_SHORT).show();
+                Log.d("ToolBar", "menu_item_2");
                 break;
             case R.id.action_3:
-                Toast.makeText(this, "你点击了menu_item_3", Toast.LENGTH_SHORT).show();
+                Log.d("ToolBar", "menu_item_3");
                 break;
             default:
                 break;

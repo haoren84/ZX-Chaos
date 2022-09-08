@@ -1,4 +1,4 @@
-package com.phantom.zxchaos.ui.notifications;
+package com.phantom.zxchaos.ui.fragment.home;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,30 +12,32 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.phantom.zxchaos.R;
-import com.phantom.zxchaos.databinding.FragmentNotificationsBinding;
+import com.phantom.zxchaos.databinding.FragmentHomeBinding;
 
-public class NotificationsFragment extends Fragment {
+/**
+ * @author Soul
+ */
+public class HomeFragment extends Fragment {
 
-    private NotificationsViewModel notificationsViewModel;
-    private FragmentNotificationsBinding binding;
+    private FragmentHomeBinding binding;
+    private HomeViewModel homeViewModel;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        notificationsViewModel =
-                new ViewModelProvider(this).get(NotificationsViewModel.class);
+        homeViewModel = new ViewModelProvider(this).get(HomeViewModel.class);
 
-        binding = FragmentNotificationsBinding.inflate(inflater, container, false);
+        binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textNotifications;
-        notificationsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        final TextView textView = binding.textHome;
+        homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
             }
         });
+
         return root;
     }
 

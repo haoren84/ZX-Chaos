@@ -1,4 +1,4 @@
-package com.phantom.zxchaos.ui.dashboard;
+package com.phantom.zxchaos.ui.fragment.dashboard;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,9 +12,11 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.phantom.zxchaos.R;
 import com.phantom.zxchaos.databinding.FragmentDashboardBinding;
 
+/**
+ * @author Soul
+ */
 public class DashboardFragment extends Fragment {
 
     private DashboardViewModel dashboardViewModel;
@@ -23,8 +25,7 @@ public class DashboardFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        dashboardViewModel =
-                new ViewModelProvider(this).get(DashboardViewModel.class);
+        dashboardViewModel = new ViewModelProvider(this).get(DashboardViewModel.class);
 
         binding = FragmentDashboardBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
